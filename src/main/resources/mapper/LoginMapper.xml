@@ -1,0 +1,17 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mink.mapper.LoginMapper">
+	<select id="selectUserInfoByLoginForm" resultType="UserInfo" parameterType="LoginForm">
+		SELECT *
+		  FROM userInfo
+		 WHERE 1 = 1
+		   AND id = #{id}
+		   AND pwd = #{pwd}
+	</select>
+	<select id="selectDbInfoByOrderCompCd" resultType="DbInfo" parameterType="UserInfo">
+		SELECT *
+		  FROM dbInfo
+		 WHERE 1 = 1
+		   AND orderCompCd = #{orderCompCd}
+	</select>
+</mapper>
